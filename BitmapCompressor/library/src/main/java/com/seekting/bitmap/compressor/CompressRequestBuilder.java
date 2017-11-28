@@ -2,45 +2,73 @@ package com.seekting.bitmap.compressor;
 
 import android.util.SparseArray;
 
+import com.seekting.bitmap.compressor.decoder.Decoder;
+import com.seekting.bitmap.compressor.encoder.EncoderConfigKeys;
+import com.seekting.bitmap.compressor.source.Source;
+import com.seekting.bitmap.compressor.source.SourceFactory;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/11/26.
+ * Created by seekting on 2017/11/26.
  */
 
-public class CompressRequestBuilder<Source> {
+public class CompressRequestBuilder<From> {
 
-    List<Source> mSources = new ArrayList<>();
-    Decoder<Source> mDecoder;
+    List<Source<From>> mSources = new ArrayList<>();
+    Decoder<Source<From>> mDecoder;
     SparseArray mDecodeConfig = new SparseArray();
+    boolean mDebug;
 
-    public CompressRequestBuilder<Source> add(Source source) {
-        mSources.add(source);
+    public CompressRequestBuilder<From> add(From from) {
+        SourceFactory<From> sourceFactory = BitmapCompressor.getSourceFactory(from.getClass());
+        if (sourceFactory == null) {
+            throw new IllegalArgumentException("have you register any SourceFactory for type of " + from.getClass() + "?");
+        }
+        Source<From> s = sourceFactory.create(from);
+        mSources.add(s);
         return this;
     }
 
-    public CompressRequestBuilder<Source> addAll(List<Source> sources) {
-        mSources.addAll(sources);
+    public CompressRequestBuilder<From> addAll(List<From> list) {
+        if (list == null || list.size() == 0) {
+            return this;
+        }
+        SourceFactory<From> factory = BitmapCompressor.getSourceFactory(list.get(0).getClass());
+
+        for (From from : list) {
+            Source<From> source = factory.create(from);
+            mSources.add(source);
+        }
         return this;
     }
 
-    public CompressRequestBuilder<Source> configDecode(int key, Object value) {
+    public CompressRequestBuilder<From> config(int key, Object value) {
         mDecodeConfig.put(key, value);
         return this;
     }
 
+    public CompressRequestBuilder<From> debug() {
+        this.mDebug = true;
+        return this;
+    }
 
-    public CompressRequestTargetBuilder<Source, File> to(String dir) {
-        CompressRequestTargetBuilder<Source, File> compressRequestTargetBuilder = new CompressRequestTargetBuilder<Source, File>(this);
+    public CompressRequestTargetBuilder<From, File> to(File difFile) {
+        CompressRequestTargetBuilder<From, File> compressRequestTargetBuilder = new CompressRequestTargetBuilder<From, File>(this);
         compressRequestTargetBuilder.mEncoder = BitmapCompressor.getEnCoder(File.class);
-        compressRequestTargetBuilder.encodeConfig(EncoderConfigKeys.TARGET_FILE_DIR_STRING, dir);
+
+        compressRequestTargetBuilder.config(EncoderConfigKeys.TARGET_FILE_DIR_STRING, difFile.getAbsolutePath());
         return compressRequestTargetBuilder;
     }
 
-    public void to() {
-
+    public CompressRequestTargetBuilder<From, File> to(String dir) {
+        CompressRequestTargetBuilder<From, File> compressRequestTargetBuilder = new CompressRequestTargetBuilder<From, File>(this);
+        compressRequestTargetBuilder.mEncoder = BitmapCompressor.getEnCoder(File.class);
+        compressRequestTargetBuilder.config(EncoderConfigKeys.TARGET_FILE_DIR_STRING, dir);
+        return compressRequestTargetBuilder;
     }
+
 
 }

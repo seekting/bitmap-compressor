@@ -2,34 +2,43 @@ package com.seekting.bitmap.compressor;
 
 import android.util.SparseArray;
 
+import com.seekting.bitmap.compressor.encoder.Encoder;
+import com.seekting.bitmap.compressor.encoder.EncoderConfigKeys;
+
 
 /**
- * Created by Administrator on 2017/11/26.
+ * Created by seekting on 2017/11/26.
  */
 
-public class CompressRequestTargetBuilder<Source, Target> {
-    CompressRequestBuilder<Source> mSourceCompressRequestBuilder;
-    Encoder<Target> mEncoder;
+public class CompressRequestTargetBuilder<From, To> {
+    CompressRequestBuilder<From> mSourceCompressRequestBuilder;
+    Encoder<To> mEncoder;
     SparseArray mEncodeConfig = new SparseArray();
 
 
-    public CompressRequestTargetBuilder(CompressRequestBuilder<Source> sourceCompressRequestBuilder) {
+    public CompressRequestTargetBuilder(CompressRequestBuilder<From> sourceCompressRequestBuilder) {
         this.mSourceCompressRequestBuilder = sourceCompressRequestBuilder;
     }
 
-    public CompressRequestTargetBuilder<Source, Target> encodeConfig(@EncoderConfigKeys int key, Object value) {
+    public CompressRequestTargetBuilder<From, To> config(@EncoderConfigKeys int key, Object value) {
         mEncodeConfig.put(key, value);
         return this;
 
     }
 
-    public CompressTask<Source, Target> create() {
+    public CompressRequestTargetBuilder<From, To> debug() {
+        this.mSourceCompressRequestBuilder.debug();
+        return this;
+    }
+
+    public CompressTask<From, To> create() {
         CompressTask compressTask = new CompressTask(
                 mSourceCompressRequestBuilder.mSources,
                 mSourceCompressRequestBuilder.mDecoder,
                 mSourceCompressRequestBuilder.mDecodeConfig,
                 mEncoder,
-                mEncodeConfig
+                mEncodeConfig,
+                mSourceCompressRequestBuilder.mDebug
         );
         return compressTask;
     }

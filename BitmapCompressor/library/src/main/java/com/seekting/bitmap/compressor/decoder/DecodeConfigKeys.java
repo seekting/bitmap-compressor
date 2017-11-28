@@ -1,4 +1,4 @@
-package com.seekting.bitmap.compressor;
+package com.seekting.bitmap.compressor.decoder;
 
 import android.annotation.IntDef;
 
@@ -6,7 +6,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * Created by Administrator on 2017/11/26.
+ * Created by seekting on 2017/11/26.
  */
 
 @IntDef({DecodeConfigKeys.MIN_FILE_SIZE,

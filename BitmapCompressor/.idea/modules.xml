@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BitmapCompressor.iml" filepath="$PROJECT_DIR$/BitmapCompressor.iml" />
+      <module fileurl="file://G:\seekting\work\git\bitmap-compressor\BitmapCompressor\BitmapCompressor.iml" filepath="G:\seekting\work\git\bitmap-compressor\BitmapCompressor\BitmapCompressor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://G:\seekting\work\git\bitmap-compressor\BitmapCompressor\app\app.iml" filepath="G:\seekting\work\git\bitmap-compressor\BitmapCompressor\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://G:\seekting\work\git\bitmap-compressor\BitmapCompressor\library\library.iml" filepath="G:\seekting\work\git\bitmap-compressor\BitmapCompressor\library\library.iml" />
     </modules>
   </component>
 </project>

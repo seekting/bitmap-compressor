@@ -4,17 +4,17 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.seekting.compressor.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        <activity android:name="com.seekting.compressor.DemoSyncLaunchActivity"/>
+        <activity android:name="com.seekting.compressor.DemoAsyncLaunchActivity"/>
+        <activity android:name="com.seekting.compressor.DemoLaunchWithCallBack"/>
+        <activity android:name="com.seekting.compressor.DemoErrorLaunchActivity"/>
+        <activity android:name="com.seekting.compressor.CustomCompressActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
