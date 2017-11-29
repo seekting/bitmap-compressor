@@ -70,6 +70,8 @@ public class DecodeUtil {
             }
 
             options.inJustDecodeBounds = false;
+            options.inSampleSize = inSimple;
+
             try {
                 recyclableBufferedInputStream.reset();
             } catch (IOException e) {
