@@ -1,5 +1,5 @@
 # BitmapCompressor
-
+[[English](readme.md)]<br>
 BitmapCompressor是一个图片压缩工具，运行在android app上，它的作用是把手机里的图片文件压缩成需要的尺寸及大小。方便用户上传到服务端，为用户节省流量。
 
 ## 简单的使用，在当前线程里返回
