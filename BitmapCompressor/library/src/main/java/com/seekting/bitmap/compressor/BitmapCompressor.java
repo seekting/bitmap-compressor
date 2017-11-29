@@ -1,6 +1,5 @@
 package com.seekting.bitmap.compressor;
 
-import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
 
@@ -16,6 +15,7 @@ import com.seekting.bitmap.compressor.source.StringSourceFactory;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -38,7 +38,6 @@ public class BitmapCompressor {
         mDecoder.put(String.class, new StringDecoder());
 
         mEncoder.put(File.class, new FileEncoder());
-        mEncoder.put(Bitmap.class, new FileEncoder());
 
     }
 
@@ -56,7 +55,15 @@ public class BitmapCompressor {
     }
 
     public static <From> boolean unRegisterDecoder(Class<From> clazz) {
-        return mDecoder.get(clazz) != null;
+        return mDecoder.remove(clazz) != null;
+    }
+
+    public static <To> void registerEncoder(Class<To> clazz, Encoder<To> encoder) {
+        mEncoder.put(clazz, encoder);
+    }
+
+    public static <To> boolean unRegisterEncoder(Class<To> clazz) {
+        return mEncoder.remove(clazz) != null;
     }
 
     public static void post(Runnable runnable) {
@@ -67,7 +74,8 @@ public class BitmapCompressor {
         return (Decoder<Source<From>>) mDecoder.get(fromClass);
     }
 
-    public static <To> Encoder<To> getEnCoder(Class<?> toClass) {
+    public static <To> Encoder<To> getEncoder(Class<?> toClass) {
+        Encoder<?> j = mEncoder.get(toClass);
         return (Encoder<To>) mEncoder.get(toClass);
     }
 
@@ -76,11 +84,28 @@ public class BitmapCompressor {
     }
 
     public static <From> CompressRequestBuilder<From> add(From from) {
+        if (from == null) {
+            throw new IllegalArgumentException("from is null!!");
+        }
         CompressRequestBuilder<From> compressRequestBuilder = new CompressRequestBuilder<>();
         compressRequestBuilder.mDecoder = getDecoder(from.getClass());
         compressRequestBuilder.add(from);
         if (compressRequestBuilder.mDecoder == null) {
             throw new IllegalArgumentException("have you register any decoder for type of " + from.getClass() + "?");
+        }
+        return compressRequestBuilder;
+
+    }
+
+    public static <From> CompressRequestBuilder<From> addAll(List<From> from) {
+        if (from == null || from.isEmpty()) {
+            throw new IllegalArgumentException("from list is null or empty!!");
+        }
+        CompressRequestBuilder<From> compressRequestBuilder = new CompressRequestBuilder<>();
+        compressRequestBuilder.mDecoder = getDecoder(from.get(0).getClass());
+        compressRequestBuilder.addAll(from);
+        if (compressRequestBuilder.mDecoder == null) {
+            throw new IllegalArgumentException("have you register any decoder for type of " + from.get(0).getClass() + "?");
         }
         return compressRequestBuilder;
 

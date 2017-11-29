@@ -14,7 +14,7 @@ import java.util.List;
  * Created by seekting on 2017/11/28.
  */
 
-public class CustomCompressActivity extends Activity {
+public class DemoCustomCompressActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

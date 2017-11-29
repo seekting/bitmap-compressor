@@ -3,6 +3,7 @@ package com.seekting.bitmap.compressor;
 import android.util.SparseArray;
 
 import com.seekting.bitmap.compressor.decoder.Decoder;
+import com.seekting.bitmap.compressor.encoder.Encoder;
 import com.seekting.bitmap.compressor.encoder.EncoderConfigKeys;
 import com.seekting.bitmap.compressor.source.Source;
 import com.seekting.bitmap.compressor.source.SourceFactory;
@@ -57,7 +58,7 @@ public class CompressRequestBuilder<From> {
 
     public CompressRequestTargetBuilder<From, File> to(File difFile) {
         CompressRequestTargetBuilder<From, File> compressRequestTargetBuilder = new CompressRequestTargetBuilder<From, File>(this);
-        compressRequestTargetBuilder.mEncoder = BitmapCompressor.getEnCoder(File.class);
+        compressRequestTargetBuilder.mEncoder = BitmapCompressor.getEncoder(File.class);
 
         compressRequestTargetBuilder.config(EncoderConfigKeys.TARGET_FILE_DIR_STRING, difFile.getAbsolutePath());
         return compressRequestTargetBuilder;
@@ -65,8 +66,18 @@ public class CompressRequestBuilder<From> {
 
     public CompressRequestTargetBuilder<From, File> to(String dir) {
         CompressRequestTargetBuilder<From, File> compressRequestTargetBuilder = new CompressRequestTargetBuilder<From, File>(this);
-        compressRequestTargetBuilder.mEncoder = BitmapCompressor.getEnCoder(File.class);
+        compressRequestTargetBuilder.mEncoder = BitmapCompressor.getEncoder(File.class);
         compressRequestTargetBuilder.config(EncoderConfigKeys.TARGET_FILE_DIR_STRING, dir);
+        return compressRequestTargetBuilder;
+    }
+
+    public <To> CompressRequestTargetBuilder<From, To> to(Class<To> toClass) {
+        CompressRequestTargetBuilder<From, To> compressRequestTargetBuilder = new CompressRequestTargetBuilder(this);
+        Encoder<Object> j = BitmapCompressor.getEncoder(toClass);
+        compressRequestTargetBuilder.mEncoder = (Encoder<To>) j;
+        if (compressRequestTargetBuilder.mEncoder == null) {
+            throw new IllegalArgumentException("have you register any encoder for type of " + toClass + " ?");
+        }
         return compressRequestTargetBuilder;
     }
 

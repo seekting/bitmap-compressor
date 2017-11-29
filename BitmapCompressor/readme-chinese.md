@@ -33,21 +33,21 @@ for (CompressResult<String, File> result : list) {
 
 ```
 ```Console
-11-28 16:01:38.722 4729-4859/com.seekting.bitmapcompressor D/CompressTask: begin decode: /sdcard/DCIM/Camera/moments_1510131377943.jpg
-11-28 16:01:39.163 4729-4859/com.seekting.bitmapcompressor D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_1510131377943.jpg
-11-28 16:01:39.163 4729-4859/com.seekting.bitmapcompressor D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_1510131377943.jpg width=3036,height=4048
-11-28 16:01:39.163 4729-4859/com.seekting.bitmapcompressor D/CompressTask: begin encode /sdcard/DCIM/Camera/moments_1510131377943.jpg
-11-28 16:01:41.725 4729-4859/com.seekting.bitmapcompressor D/CompressTask: end encode /sdcard/DCIM/Camera/moments_1510131377943.jpg
-11-28 16:01:41.725 4729-4859/com.seekting.bitmapcompressor D/CompressTask: begin decode: /sdcard/DCIM/Camera/moments_1510131393760.jpg
-11-28 16:01:42.196 4729-4859/com.seekting.bitmapcompressor D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_1510131393760.jpg
-11-28 16:01:42.196 4729-4859/com.seekting.bitmapcompressor D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_1510131393760.jpg width=3036,height=4048
-11-28 16:01:42.196 4729-4859/com.seekting.bitmapcompressor D/CompressTask: begin encode /sdcard/DCIM/Camera/moments_1510131393760.jpg
-11-28 16:01:44.904 4729-4859/com.seekting.bitmapcompressor D/CompressTask: end encode /sdcard/DCIM/Camera/moments_1510131393760.jpg
-11-28 16:01:44.904 4729-4859/com.seekting.bitmapcompressor D/CompressTask: begin decode: /sdcard/DCIM/Camera/moments_15101313937601.jpg
-11-28 16:01:44.906 4729-4859/com.seekting.bitmapcompressor D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_15101313937601.jpgBaseException{mThrowable=BaseException{mThrowable=null, msg='File Not Exit:/sdcard/DCIM/Camera/moments_15101313937601.jpg'}, msg='BitmapFactory decode fail!! '}
-11-28 16:01:44.906 4729-4859/com.seekting.bitmapcompressor D/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_1510131377943.jpg, mTo=/sdcard/compressor/compress_moments_1510131377943.jpg, mResultError=null}
-11-28 16:01:44.906 4729-4859/com.seekting.bitmapcompressor D/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_1510131393760.jpg, mTo=/sdcard/compressor/compress_moments_1510131393760.jpg, mResultError=null}
-11-28 16:01:44.906 4729-4859/com.seekting.bitmapcompressor E/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_15101313937601.jpg, mTo=null, mResultError=ResultError{mDecodeException=BaseException{mThrowable=BaseException{mThrowable=null, msg='File Not Exit:/sdcard/DCIM/Camera/moments_15101313937601.jpg'}, msg='BitmapFactory decode fail!! '}, mEncodeException=null}}
+ D/CompressTask: begin decode: /sdcard/DCIM/Camera/moments_1510131377943.jpg
+ D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_1510131377943.jpg
+ D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_1510131377943.jpg width=3036,height=4048
+ D/CompressTask: begin encode /sdcard/DCIM/Camera/moments_1510131377943.jpg
+ D/CompressTask: end encode /sdcard/DCIM/Camera/moments_1510131377943.jpg
+ D/CompressTask: begin decode: /sdcard/DCIM/Camera/moments_1510131393760.jpg
+ D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_1510131393760.jpg
+ D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_1510131393760.jpg width=3036,height=4048
+ D/CompressTask: begin encode /sdcard/DCIM/Camera/moments_1510131393760.jpg
+ D/CompressTask: end encode /sdcard/DCIM/Camera/moments_1510131393760.jpg
+ D/CompressTask: begin decode: /sdcard/DCIM/Camera/moments_15101313937601.jpg
+ D/CompressTask: end decode: /sdcard/DCIM/Camera/moments_15101313937601.jpgBaseException{mThrowable=BaseException{mThrowable=null, msg='File Not Exit:/sdcard/DCIM/Camera/moments_15101313937601.jpg'}, msg='BitmapFactory decode fail!! '}
+ D/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_1510131377943.jpg, mTo=/sdcard/compressor/compress_moments_1510131377943.jpg, mResultError=null}
+ D/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_1510131393760.jpg, mTo=/sdcard/compressor/compress_moments_1510131393760.jpg, mResultError=null}
+ E/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_15101313937601.jpg, mTo=null, mResultError=ResultError{mDecodeException=BaseException{mThrowable=BaseException{mThrowable=null, msg='File Not Exit:/sdcard/DCIM/Camera/moments_15101313937601.jpg'}, msg='BitmapFactory decode fail!! '}, mEncodeException=null}}
 
 
 ```
@@ -195,9 +195,9 @@ public class DemoLaunchWithCallBack extends Activity {
 ```
 
 ```Console
-11-28 16:06:46.821 4729-5089/com.seekting.bitmapcompressor D/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_1510131377943.jpg, mTo=/sdcard/compressor/compress_moments_1510131377943.jpg, mResultError=null}
-11-28 16:06:46.821 4729-5089/com.seekting.bitmapcompressor D/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_1510131393760.jpg, mTo=/sdcard/compressor/compress_moments_1510131393760.jpg, mResultError=null}
-11-28 16:06:46.821 4729-5089/com.seekting.bitmapcompressor E/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_15101313937601.jpg, mTo=null, mResultError=ResultError{mDecodeException=BaseException{mThrowable=BaseException{mThrowable=null, msg='File Not Exit:/sdcard/DCIM/Camera/moments_15101313937601.jpg'}, msg='BitmapFactory decode fail!! '}, mEncodeException=null}}
+ D/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_1510131377943.jpg, mTo=/sdcard/compressor/compress_moments_1510131377943.jpg, mResultError=null}
+ D/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_1510131393760.jpg, mTo=/sdcard/compressor/compress_moments_1510131393760.jpg, mResultError=null}
+ E/seekting: CompressResult{mFrom=/sdcard/DCIM/Camera/moments_15101313937601.jpg, mTo=null, mResultError=ResultError{mDecodeException=BaseException{mThrowable=BaseException{mThrowable=null, msg='File Not Exit:/sdcard/DCIM/Camera/moments_15101313937601.jpg'}, msg='BitmapFactory decode fail!! '}, mEncodeException=null}}
 
 
 ```
@@ -227,114 +227,114 @@ public class DemoLaunchWithCallBack extends Activity {
 ```
 
 ```Console
-11-28 16:38:51.541 7585-7585/com.seekting.bitmapcompressor E/seekting: error
-                                                                       ResultError{mDecodeException=com.seekting.bitmap.compressor.decoder.DecodeException: BitmapFactory decode fail!! , mEncodeException=null}
-                                                                           at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:54)
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36)
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23)
-                                                                           at android.app.Activity.performCreate(Activity.java:6682)
-                                                                           at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
-                                                                           at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619)
-                                                                           at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727)
-                                                                           at android.app.ActivityThread.-wrap12(ActivityThread.java)
-                                                                           at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478)
-                                                                           at android.os.Handler.dispatchMessage(Handler.java:102)
-                                                                           at android.os.Looper.loop(Looper.java:154)
-                                                                           at android.app.ActivityThread.main(ActivityThread.java:6121)
-                                                                           at java.lang.reflect.Method.invoke(Native Method)
-                                                                           at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889)
-                                                                           at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
-                                                                        Caused by: com.seekting.bitmap.compressor.decoder.DecodeException: BitmapFactory decode fail!!
-                                                                           at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:23)
-                                                                           at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:15)
-                                                                           at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:50)
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36) 
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23) 
-                                                                           at android.app.Activity.performCreate(Activity.java:6682) 
-                                                                           at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118) 
-                                                                           at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619) 
-                                                                           at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
-                                                                           at android.app.ActivityThread.-wrap12(ActivityThread.java) 
-                                                                           at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
-                                                                           at android.os.Handler.dispatchMessage(Handler.java:102) 
-                                                                           at android.os.Looper.loop(Looper.java:154) 
-                                                                           at android.app.ActivityThread.main(ActivityThread.java:6121) 
-                                                                           at java.lang.reflect.Method.invoke(Native Method) 
-                                                                           at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
-                                                                           at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
-                                                                        Caused by: com.seekting.bitmap.compressor.decoder.DecodeException: File Not Exit:/notexit1.jpg
-                                                                           at com.seekting.bitmap.compressor.decoder.DecodeUtil.decode(DecodeUtil.java:20)
-                                                                           at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:20)
-                                                                           at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:15) 
-                                                                           at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:50) 
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36) 
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23) 
-                                                                           at android.app.Activity.performCreate(Activity.java:6682) 
-                                                                           at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118) 
-                                                                           at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619) 
-                                                                           at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
-                                                                           at android.app.ActivityThread.-wrap12(ActivityThread.java) 
-                                                                           at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
-                                                                           at android.os.Handler.dispatchMessage(Handler.java:102) 
-                                                                           at android.os.Looper.loop(Looper.java:154) 
-                                                                           at android.app.ActivityThread.main(ActivityThread.java:6121) 
-                                                                           at java.lang.reflect.Method.invoke(Native Method) 
-                                                                           at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
-                                                                           at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
-11-28 16:38:51.542 7585-7585/com.seekting.bitmapcompressor E/seekting: error
-                                                                       ResultError{mDecodeException=com.seekting.bitmap.compressor.decoder.DecodeException: BitmapFactory decode fail!! , mEncodeException=null}
-                                                                           at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:54)
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36)
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23)
-                                                                           at android.app.Activity.performCreate(Activity.java:6682)
-                                                                           at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
-                                                                           at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619)
-                                                                           at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727)
-                                                                           at android.app.ActivityThread.-wrap12(ActivityThread.java)
-                                                                           at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478)
-                                                                           at android.os.Handler.dispatchMessage(Handler.java:102)
-                                                                           at android.os.Looper.loop(Looper.java:154)
-                                                                           at android.app.ActivityThread.main(ActivityThread.java:6121)
-                                                                           at java.lang.reflect.Method.invoke(Native Method)
-                                                                           at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889)
-                                                                           at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
-                                                                        Caused by: com.seekting.bitmap.compressor.decoder.DecodeException: BitmapFactory decode fail!!
-                                                                           at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:23)
-                                                                           at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:15)
-                                                                           at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:50)
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36) 
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23) 
-                                                                           at android.app.Activity.performCreate(Activity.java:6682) 
-                                                                           at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118) 
-                                                                           at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619) 
-                                                                           at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
-                                                                           at android.app.ActivityThread.-wrap12(ActivityThread.java) 
-                                                                           at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
-                                                                           at android.os.Handler.dispatchMessage(Handler.java:102) 
-                                                                           at android.os.Looper.loop(Looper.java:154) 
-                                                                           at android.app.ActivityThread.main(ActivityThread.java:6121) 
-                                                                           at java.lang.reflect.Method.invoke(Native Method) 
-                                                                           at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
-                                                                           at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
-                                                                        Caused by: com.seekting.bitmap.compressor.decoder.DecodeException: File Not Exit:/notexit.jpg
-                                                                           at com.seekting.bitmap.compressor.decoder.DecodeUtil.decode(DecodeUtil.java:20)
-                                                                           at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:20)
-                                                                           at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:15) 
-                                                                           at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:50) 
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36) 
-                                                                           at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23) 
-                                                                           at android.app.Activity.performCreate(Activity.java:6682) 
-                                                                           at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118) 
-                                                                           at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619) 
-                                                                           at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
-                                                                           at android.app.ActivityThread.-wrap12(ActivityThread.java) 
-                                                                           at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
-                                                                           at android.os.Handler.dispatchMessage(Handler.java:102) 
-                                                                           at android.os.Looper.loop(Looper.java:154) 
-                                                                           at android.app.ActivityThread.main(ActivityThread.java:6121) 
-                                                                           at java.lang.reflect.Method.invoke(Native Method) 
-                                                                           at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
-                                                                           at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
+ E/seekting: error
+ResultError{mDecodeException=com.seekting.bitmap.compressor.decoder.DecodeException: BitmapFactory decode fail!! , mEncodeException=null}
+at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:54)
+at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36)
+at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23)
+at android.app.Activity.performCreate(Activity.java:6682)
+at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619)
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727)
+at android.app.ActivityThread.-wrap12(ActivityThread.java)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478)
+at android.os.Handler.dispatchMessage(Handler.java:102)
+at android.os.Looper.loop(Looper.java:154)
+at android.app.ActivityThread.main(ActivityThread.java:6121)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
+Caused by: com.seekting.bitmap.compressor.decoder.DecodeException: BitmapFactory decode fail!!
+at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:23)
+at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:15)
+at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:50)
+at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36) 
+at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23) 
+at android.app.Activity.performCreate(Activity.java:6682) 
+at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118) 
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619) 
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
+at android.app.ActivityThread.-wrap12(ActivityThread.java) 
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
+at android.os.Handler.dispatchMessage(Handler.java:102) 
+at android.os.Looper.loop(Looper.java:154) 
+at android.app.ActivityThread.main(ActivityThread.java:6121) 
+at java.lang.reflect.Method.invoke(Native Method) 
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
+Caused by: com.seekting.bitmap.compressor.decoder.DecodeException: File Not Exit:/notexit1.jpg
+at com.seekting.bitmap.compressor.decoder.DecodeUtil.decode(DecodeUtil.java:20)
+at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:20)
+at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:15) 
+at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:50) 
+at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36) 
+at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23) 
+at android.app.Activity.performCreate(Activity.java:6682) 
+at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118) 
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619) 
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
+at android.app.ActivityThread.-wrap12(ActivityThread.java) 
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
+at android.os.Handler.dispatchMessage(Handler.java:102) 
+at android.os.Looper.loop(Looper.java:154) 
+at android.app.ActivityThread.main(ActivityThread.java:6121) 
+at java.lang.reflect.Method.invoke(Native Method) 
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
+ E/seekting: error
+ResultError{mDecodeException=com.seekting.bitmap.compressor.decoder.DecodeException: BitmapFactory decode fail!! , mEncodeException=null}
+at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:54)
+at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36)
+at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23)
+at android.app.Activity.performCreate(Activity.java:6682)
+at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619)
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727)
+at android.app.ActivityThread.-wrap12(ActivityThread.java)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478)
+at android.os.Handler.dispatchMessage(Handler.java:102)
+at android.os.Looper.loop(Looper.java:154)
+at android.app.ActivityThread.main(ActivityThread.java:6121)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
+Caused by: com.seekting.bitmap.compressor.decoder.DecodeException: BitmapFactory decode fail!!
+at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:23)
+at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:15)
+at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:50)
+at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36) 
+at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23) 
+at android.app.Activity.performCreate(Activity.java:6682) 
+at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118) 
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619) 
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
+at android.app.ActivityThread.-wrap12(ActivityThread.java) 
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
+at android.os.Handler.dispatchMessage(Handler.java:102) 
+at android.os.Looper.loop(Looper.java:154) 
+at android.app.ActivityThread.main(ActivityThread.java:6121) 
+at java.lang.reflect.Method.invoke(Native Method) 
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
+Caused by: com.seekting.bitmap.compressor.decoder.DecodeException: File Not Exit:/notexit.jpg
+at com.seekting.bitmap.compressor.decoder.DecodeUtil.decode(DecodeUtil.java:20)
+at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:20)
+at com.seekting.bitmap.compressor.decoder.StringDecoder.decode(StringDecoder.java:15) 
+at com.seekting.bitmap.compressor.CompressTask.launch(CompressTask.java:50) 
+at com.seekting.compressor.DemoErrorLaunchActivity.syncError(DemoErrorLaunchActivity.java:36) 
+at com.seekting.compressor.DemoErrorLaunchActivity.onCreate(DemoErrorLaunchActivity.java:23) 
+at android.app.Activity.performCreate(Activity.java:6682) 
+at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118) 
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619) 
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
+at android.app.ActivityThread.-wrap12(ActivityThread.java) 
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
+at android.os.Handler.dispatchMessage(Handler.java:102) 
+at android.os.Looper.loop(Looper.java:154) 
+at android.app.ActivityThread.main(ActivityThread.java:6121) 
+at java.lang.reflect.Method.invoke(Native Method) 
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
 
 
 ```
@@ -369,35 +369,35 @@ public class ImageUrl {
 
 但是不能如你所愿，你没有注册SourceFactory,因为系统里目前不支持该源的解析，所以你需要自己去实现它.
 ```Console
-11-28 16:56:12.802 9426-9426/com.seekting.bitmapcompressor E/AndroidRuntime: FATAL EXCEPTION: main
-                                                                             Process: com.seekting.bitmapcompressor, PID: 9426
-                                                                             java.lang.RuntimeException: Unable to start activity ComponentInfo{com.seekting.bitmapcompressor/com.seekting.compressor.CustomCompressActivity}: java.lang.IllegalArgumentException: have you register any SourceFactory for type of class com.seekting.compressor.CustomCompressActivity$ImageUrl?
-                                                                                 at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2666)
-                                                                                 at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727)
-                                                                                 at android.app.ActivityThread.-wrap12(ActivityThread.java)
-                                                                                 at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478)
-                                                                                 at android.os.Handler.dispatchMessage(Handler.java:102)
-                                                                                 at android.os.Looper.loop(Looper.java:154)
-                                                                                 at android.app.ActivityThread.main(ActivityThread.java:6121)
-                                                                                 at java.lang.reflect.Method.invoke(Native Method)
-                                                                                 at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889)
-                                                                                 at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
-                                                                              Caused by: java.lang.IllegalArgumentException: have you register any SourceFactory for type of class com.seekting.compressor.CustomCompressActivity$ImageUrl?
-                                                                                 at com.seekting.bitmap.compressor.CompressRequestBuilder.add(CompressRequestBuilder.java:28)
-                                                                                 at com.seekting.bitmap.compressor.BitmapCompressor.add(BitmapCompressor.java:81)
-                                                                                 at com.seekting.compressor.CustomCompressActivity.onCreate(CustomCompressActivity.java:20)
-                                                                                 at android.app.Activity.performCreate(Activity.java:6682)
-                                                                                 at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
-                                                                                 at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619)
-                                                                                 at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
-                                                                                 at android.app.ActivityThread.-wrap12(ActivityThread.java) 
-                                                                                 at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
-                                                                                 at android.os.Handler.dispatchMessage(Handler.java:102) 
-                                                                                 at android.os.Looper.loop(Looper.java:154) 
-                                                                                 at android.app.ActivityThread.main(ActivityThread.java:6121) 
-                                                                                 at java.lang.reflect.Method.invoke(Native Method) 
-                                                                                 at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
-                                                                                 at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
+ E/AndroidRuntime: FATAL EXCEPTION: main
+Process: com.seekting.bitmapcompressor, PID: 9426
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.seekting.bitmapcompressor/com.seekting.compressor.CustomCompressActivity}: java.lang.IllegalArgumentException: have you register any SourceFactory for type of class com.seekting.compressor.CustomCompressActivity$ImageUrl?
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2666)
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727)
+at android.app.ActivityThread.-wrap12(ActivityThread.java)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478)
+at android.os.Handler.dispatchMessage(Handler.java:102)
+at android.os.Looper.loop(Looper.java:154)
+at android.app.ActivityThread.main(ActivityThread.java:6121)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
+Caused by: java.lang.IllegalArgumentException: have you register any SourceFactory for type of class com.seekting.compressor.CustomCompressActivity$ImageUrl?
+at com.seekting.bitmap.compressor.CompressRequestBuilder.add(CompressRequestBuilder.java:28)
+at com.seekting.bitmap.compressor.BitmapCompressor.add(BitmapCompressor.java:81)
+at com.seekting.compressor.CustomCompressActivity.onCreate(CustomCompressActivity.java:20)
+at android.app.Activity.performCreate(Activity.java:6682)
+at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619)
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727) 
+at android.app.ActivityThread.-wrap12(ActivityThread.java) 
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478) 
+at android.os.Handler.dispatchMessage(Handler.java:102) 
+at android.os.Looper.loop(Looper.java:154) 
+at android.app.ActivityThread.main(ActivityThread.java:6121) 
+at java.lang.reflect.Method.invoke(Native Method) 
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889) 
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779) 
 
 ```
 
@@ -522,13 +522,77 @@ public class CustomCompressActivity extends Activity {
 
 输出结果:
 ```Console
-11-28 18:23:20.269 15094-15237/com.seekting.bitmapcompressor D/CompressTask: begin decode: com.seekting.compressor.ImageUrl@d65e82f
-11-28 18:23:20.271 15094-15237/com.seekting.bitmapcompressor D/NetworkSecurityConfig: No Network Security Config specified, using platform default
-11-28 18:23:20.504 15094-15237/com.seekting.bitmapcompressor D/CompressTask: end decode: com.seekting.compressor.ImageUrl@d65e82f
-11-28 18:23:20.505 15094-15237/com.seekting.bitmapcompressor D/CompressTask: end decode: com.seekting.compressor.ImageUrl@d65e82f width=500,height=648
-11-28 18:23:20.505 15094-15237/com.seekting.bitmapcompressor D/CompressTask: begin encode com.seekting.compressor.ImageUrl@d65e82f
-11-28 18:23:20.583 15094-15237/com.seekting.bitmapcompressor D/CompressTask: end encode com.seekting.compressor.ImageUrl@d65e82f
-11-28 18:23:20.583 15094-15237/com.seekting.bitmapcompressor D/seekting: imageUrlFileCompressResult=CompressResult{mFrom=com.seekting.compressor.ImageUrl@d65e82f, mTo=/sdcard/compressor/compress_c9595d8f-f8e9-4015-a46e-b26dadf32e2c.jpg, mResultError=null}
+ D/CompressTask: begin decode: com.seekting.compressor.ImageUrl@d65e82f
+ D/NetworkSecurityConfig: No Network Security Config specified, using platform default
+ D/CompressTask: end decode: com.seekting.compressor.ImageUrl@d65e82f
+ D/CompressTask: end decode: com.seekting.compressor.ImageUrl@d65e82f width=500,height=648
+ D/CompressTask: begin encode com.seekting.compressor.ImageUrl@d65e82f
+ D/CompressTask: end encode com.seekting.compressor.ImageUrl@d65e82f
+ D/seekting: imageUrlFileCompressResult=CompressResult{mFrom=com.seekting.compressor.ImageUrl@d65e82f, mTo=/sdcard/compressor/compress_c9595d8f-f8e9-4015-a46e-b26dadf32e2c.jpg, mResultError=null}
 
 
 ```
+
+## 自定义Encoder
+
+比如你期望转成Bitmap
+```java
+String path1 = "/sdcard/DCIM/Camera/moments_1510131377943.jpg";
+List<CompressResult<String, Bitmap>> list = BitmapCompressor.add(path1)
+                                            .debug()
+                                            .to(Bitmap
+                                            .class)
+                                            .create()
+                                            .launch();
+for (CompressResult<String, Bitmap> imageUrlFileCompressResult : list) {
+    Log.d("seekting", "imageUrlFileCompressResult=" + imageUrlFileCompressResult);
+    if (imageUrlFileCompressResult.getResultError() != null) {
+        imageUrlFileCompressResult.getResultError().printStackTrace();
+    }
+}
+
+```
+然而这并不能如你所愿:
+```Console
+FATAL EXCEPTION: Thread-2
+Process: com.seekting.bitmapcompressor, PID: 18017
+java.lang.IllegalArgumentException: have you register any encoder for type of class android.graphics.Bitmap?
+ at com.seekting.bitmap.compressor.CompressRequestBuilder.to(CompressRequestBuilder.java:78)
+ at com.seekting.compressor.DemoCustomCompress1Activity$1.run(DemoCustomCompress1Activity.java:26)
+ at java.lang.Thread.run(Thread.java:761)
+```
+
+你需求注册Encoder<Bitmap>
+
+
+```java
+public class BitmapEncoder implements Encoder<Bitmap> {
+    @Override
+    public Bitmap encode(Bitmap bitmap, String id, SparseArray sparseArray) throws EncodeException {
+        return bitmap;
+    }
+}
+
+
+
+```
+通过registerEncoder注册
+```java
+String path1 = "/sdcard/DCIM/Camera/moments_1510131377943.jpg";
+BitmapCompressor.registerEncoder(Bitmap.class, new BitmapEncoder());
+List<CompressResult<String, Bitmap>> list = BitmapCompressor.add(path1).debug().to(Bitmap.class).create().launch();
+for (CompressResult<String, Bitmap> imageUrlFileCompressResult : list) {
+    Log.d("seekting", "imageUrlFileCompressResult=" + imageUrlFileCompressResult);
+    if (imageUrlFileCompressResult.getResultError() != null) {
+        imageUrlFileCompressResult.getResultError().printStackTrace();
+    }
+}
+
+```
+
+输出成功：
+```Console
+ D/seekting: compressResult=CompressResult{mFrom=/sdcard/DCIM/Camera/moments_1510131377943.jpg, mTo=android.graphics.Bitmap@c1297c5, mResultError=null}
+
+```
+

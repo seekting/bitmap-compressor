@@ -13,7 +13,8 @@
         <activity android:name="com.seekting.compressor.DemoAsyncLaunchActivity"/>
         <activity android:name="com.seekting.compressor.DemoLaunchWithCallBack"/>
         <activity android:name="com.seekting.compressor.DemoErrorLaunchActivity"/>
-        <activity android:name="com.seekting.compressor.CustomCompressActivity"/>
+        <activity android:name="com.seekting.compressor.DemoCustomCompressActivity"/>
+        <activity android:name="com.seekting.compressor.DemoCustomCompress1Activity"/>
 
     </application>
 
