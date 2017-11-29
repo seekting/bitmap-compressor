@@ -24,6 +24,7 @@ public class CompressRequestBuilder<From> {
     boolean mDebug;
 
     public CompressRequestBuilder<From> add(From from) {
+        ObjectHelper.requireNotNull(from, "from  is null!!");
         SourceFactory<From> sourceFactory = BitmapCompressor.getSourceFactory(from.getClass());
         if (sourceFactory == null) {
             throw new IllegalArgumentException("have you register any SourceFactory for type of " + from.getClass() + "?");
@@ -34,7 +35,8 @@ public class CompressRequestBuilder<From> {
     }
 
     public CompressRequestBuilder<From> addAll(List<From> list) {
-        if (list == null || list.size() == 0) {
+        ObjectHelper.requireNotNull(list, "from list  is null!!");
+        if (list.isEmpty()) {
             return this;
         }
         SourceFactory<From> factory = BitmapCompressor.getSourceFactory(list.get(0).getClass());

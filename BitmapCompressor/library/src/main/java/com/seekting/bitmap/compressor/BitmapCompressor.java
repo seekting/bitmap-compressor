@@ -42,27 +42,36 @@ public class BitmapCompressor {
     }
 
     public static <From> void registerSourceFactory(Class<From> clazz, SourceFactory<From> factory) {
+        ObjectHelper.requireNotNull(clazz,"");
+        ObjectHelper.requireNotNull(factory,"");
         mSourceFactory.put(clazz, factory);
     }
 
     public static <From> boolean unRegisterSourceFactory(Class<From> clazz) {
+        ObjectHelper.requireNotNull(clazz,"");
         return mSourceFactory.remove(clazz) != null;
 
     }
 
     public static <From> void registerDecoder(Class<From> clazz, Decoder<? extends Source<From>> decoder) {
+        ObjectHelper.requireNotNull(clazz,"");
+        ObjectHelper.requireNotNull(decoder,"");
         mDecoder.put(clazz, decoder);
     }
 
     public static <From> boolean unRegisterDecoder(Class<From> clazz) {
+        ObjectHelper.requireNotNull(clazz,"");
         return mDecoder.remove(clazz) != null;
     }
 
     public static <To> void registerEncoder(Class<To> clazz, Encoder<To> encoder) {
+        ObjectHelper.requireNotNull(clazz,"");
+        ObjectHelper.requireNotNull(encoder,"");
         mEncoder.put(clazz, encoder);
     }
 
     public static <To> boolean unRegisterEncoder(Class<To> clazz) {
+        ObjectHelper.requireNotNull(clazz,"");
         return mEncoder.remove(clazz) != null;
     }
 
@@ -84,9 +93,7 @@ public class BitmapCompressor {
     }
 
     public static <From> CompressRequestBuilder<From> add(From from) {
-        if (from == null) {
-            throw new IllegalArgumentException("from is null!!");
-        }
+        ObjectHelper.requireNotNull(from, "from is null!!");
         CompressRequestBuilder<From> compressRequestBuilder = new CompressRequestBuilder<>();
         compressRequestBuilder.mDecoder = getDecoder(from.getClass());
         compressRequestBuilder.add(from);
@@ -98,7 +105,8 @@ public class BitmapCompressor {
     }
 
     public static <From> CompressRequestBuilder<From> addAll(List<From> from) {
-        if (from == null || from.isEmpty()) {
+        ObjectHelper.requireNotNull(from, "from list is null!!");
+        if (from.isEmpty()) {
             throw new IllegalArgumentException("from list is null or empty!!");
         }
         CompressRequestBuilder<From> compressRequestBuilder = new CompressRequestBuilder<>();
